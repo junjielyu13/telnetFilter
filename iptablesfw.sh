@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Allow SSH and HTTP
-iptables -A INPUT -p tcp --dport 22 -j
-iptables -A INPUT -p tcp --dport 80 -j
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 iptables -A OUTPU T -p tcp -j ACCEPT
 
 # Allow loopback
